@@ -37,17 +37,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="img/favicon_sm.png" height="30" width="41"></a>
+                <a class="navbar-brand" href="index.html"><img src="img/favicon_sm.png" height="30" width="41"></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+                    <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <span class="fa fa-film" aria-hidden="true"></span>
                             Movies <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="insert.html">Insert</a></li>
+                            <li  class="active"><a href="#">Insert</a></li>
                             <li><a href="#">Edit</a></li>
                             <li><a href="#">Delete</a></li>
                             <li role="separator" class="divider"></li>
@@ -78,7 +78,19 @@
 
     <!-- Container -->
     <div class="container">
-
+        <!-- Breadcrum -->
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="active">Insert</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>Insert new Movie</h3>
+               <hr>
+            </div>
+        </div>
     <!-- End container -->
     </div>
 
