@@ -1,0 +1,22 @@
+{
+  "name": "movies",
+  "homepage": "https://github.com/joudaon/Movies",
+  "authors": [
+    "joudaon <jonuda77@gmail.com>"
+  ],
+  "description": "movies project",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
