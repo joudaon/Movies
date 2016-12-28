@@ -21,18 +21,7 @@ angular.module('moviesApp', ['ui.router'])
 
             })
             
-            // route for the contactus page
-            .state('app.insert', {
-                url:'insert',
-                views: {
-                    'content@': {
-                        templateUrl : 'views/insert.html'
-                     }
-                }
-            })
-        
-      
-    
+
         $urlRouterProvider.otherwise('/');
     })
 ;
