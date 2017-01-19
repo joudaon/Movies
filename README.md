@@ -9,3 +9,8 @@ Angular-ui-bootstrap (https://github.com/angular-ui/bootstrap-bower)
 ```sh
 $ bower install angular-bootstrap -S
 ```
+
+Angular Angular ngResource ()
+```sh
+$ bower install angular-resource -S
+```
