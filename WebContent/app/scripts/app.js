@@ -26,7 +26,8 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap'])
                 url:'insert',
                 views: {
                     'content@': {
-                        templateUrl: 'views/insert.html'
+                        templateUrl: 'views/insert.html',
+                        controller: 'InsertController'
                    }
                 }
             })            
