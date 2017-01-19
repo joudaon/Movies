@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('moviesApp', ['ui.router', 'ui.bootstrap'])
+angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource'])
 .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
         
