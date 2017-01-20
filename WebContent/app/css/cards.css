@@ -2,8 +2,7 @@
 .hover-div{
     margin:0 auto;
     max-width:350px;
-    margin-bottom:20px;
-    border:1px solid #ccc;
+    margin-bottom:20px;  
     position:relative;
     overflow:hidden;
 }
@@ -43,9 +42,18 @@
 .hover-div:hover img{
     transition:all ease-in-out .5s;
     opacity:.6;
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 .thumbnail {
 	margin-bottom: 0px;
+	overflow: hidden;
+}
+
+img{
+	border-radius: 5px 5px 5px 5px;
+}
+
+.thumbnail .caption{
+	padding-top: 2px;
 }
