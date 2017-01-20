@@ -8,20 +8,22 @@ angular.module ('moviesApp')
 		growlProvider.globalPosition('top-right');
 	}])
 
-	//Insert Movie Controller - insert.html
+	/*------------Insert Movie Controller - insert.html ------------*/
 	.controller ('InsertController', ['$scope', 'insertmovieFactory', 'growl', function($scope, insertmovieFactory, growl){
 		//Insert the movie in the db.json file, display a crawl and cleans the form
 		$scope.addMovie = function(){
+			//added "alt" attribute
+			$scope.movie.alt = $scope.movie.title;
 			console.log($scope.movie);
 			insertmovieFactory.saveMovie().save({id:$scope.movie.id}, $scope.movie);			
 			growl.success("Movie " + $scope.movie.title + " correctly saved", {title: 'Success', disableCountDown: true});
 			$scope.movie = {title:"", releasedate:"", length:"", plot:"", cast:"", downloaddate:""};
 			//$scope.movieform.$setPristine();
-			console.log($scope.movie.title);
 		}
 					
 	}])
 	
+	/*------------Video Gallery Controller - videogallery.html------------*/
 	.controller ('VideoGalleryController', ['$scope', 'videogalleryFactory', function($scope, videogalleryFactory){		
 		//Get dishes from db_movies.json
 		videogalleryFactory.getMovies().query(
