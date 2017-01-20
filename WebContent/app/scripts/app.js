@@ -33,11 +33,11 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource'])
             })
             
             // route for the insert page
-            .state('app.videolibrary', {
-                url:'videolibrary',
+            .state('app.videogallery', {
+                url:'videogallery',
                 views: {
                     'content@': {
-                        templateUrl: 'views/videolibrary.html',
+                        templateUrl: 'views/videogallery.html',
                         controller: 'VideoLibraryController'
                    }
                 }
