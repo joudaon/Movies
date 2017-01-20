@@ -3,20 +3,18 @@
 angular.module ('moviesApp')
 
 	//Insert Movie Controller - insert.html
-	.controller ('InsertController', ['$scope', 'movieFactory', function($scope, movieFactory){
-		//Test 
-		$scope.mymovies = [];
-		
+	.controller ('InsertController', ['$scope', 'insertmovieFactory', function($scope, insertmovieFactory){
+		//Insert the movie in the db.json file
 		$scope.addMovie = function(){
-			$scope.mymovies.push($scope.movie);
-			$scope.movie = {};
+			console.log($scope.movie);
+			insertmovieFactory.saveMovie().save({id:$scope.movie.id}, $scope.movie);
 		}
 					
 	}])
 	
-	.controller ('VideoLibraryController', ['$scope', 'movieFactory', function($scope, movieFactory){		
+	.controller ('VideoLibraryController', ['$scope', 'videolibraryFactory', function($scope, videolibraryFactory){		
 		//Get dishes from db_movies.json
-		movieFactory.getMovies().query(
+		videolibraryFactory.getMovies().query(
                 function(response) {
                     $scope.movies = response;
                     //$scope.showMenu = true;
