@@ -23,7 +23,8 @@
     "angular-ui-router": "^0.3.2",
     "angular-resource": "^1.5.9",
     "angular-mocks": "^1.5.9",
-    "angular-bootstrap": "^2.3.2"
+    "angular-bootstrap": "^2.3.2",
+    "angular-growl-v2": "^0.7.9"
   },
   "resolutions": {
     "angular": "~1.4.7"
