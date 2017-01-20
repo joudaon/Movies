@@ -38,7 +38,7 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource'])
                 views: {
                     'content@': {
                         templateUrl: 'views/videogallery.html',
-                        controller: 'VideoLibraryController'
+                        controller: 'VideoGalleryController'
                    }
                 }
             })

@@ -12,9 +12,9 @@ angular.module ('moviesApp')
 					
 	}])
 	
-	.controller ('VideoLibraryController', ['$scope', 'videolibraryFactory', function($scope, videolibraryFactory){		
+	.controller ('VideoGalleryController', ['$scope', 'videogalleryFactory', function($scope, videogalleryFactory){		
 		//Get dishes from db_movies.json
-		videolibraryFactory.getMovies().query(
+		videogalleryFactory.getMovies().query(
                 function(response) {
                     $scope.movies = response;
                     //$scope.showMenu = true;

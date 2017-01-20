@@ -5,7 +5,7 @@ angular.module ('moviesApp')
 	.constant("baseURL", "http://localhost:3000/")
 	
 	//videolibrary Service
-	.service('videolibraryFactory', ['$resource', 'baseURL', function($resource, baseURL) {
+	.service('videogalleryFactory', ['$resource', 'baseURL', function($resource, baseURL) {
 		//gets movies from bd.json file
 		this.getMovies = function(){                    
         	return $resource(baseURL+"movies",null,  {'get':{method:'GET' }});                    
