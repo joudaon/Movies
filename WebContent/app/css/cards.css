@@ -1,0 +1,51 @@
+
+.hover-div{
+    margin:0 auto;
+    max-width:350px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    position:relative;
+    overflow:hidden;
+}
+.hover-div{
+    
+}
+.hover-div img{
+    width:100%;
+     transition:all ease-in-out .5s;
+}
+.view-details{
+     transition:all ease-in-out .5s;
+     top:45%;
+    left:32%;
+    position:absolute;
+    opacity:0;
+}
+.view-details h4{
+    transition:all ease-in-out .2s;
+    background-color:#3ad0fc;
+    padding:12px 24px;
+    color:#fff;
+}
+.view-details:hover h4{
+    transition:all ease-in-out .2s;
+    background-color:#0D1335;
+    padding:12px 24px;
+    color:#fff;
+}
+
+.hover-div:hover .view-details{
+    transition:all ease-in-out .5s;
+    opacity:1;
+    color:#000;
+    top:42%;
+}
+.hover-div:hover img{
+    transition:all ease-in-out .5s;
+    opacity:.6;
+    transform: scale(1.2);
+}
+
+.thumbnail {
+	margin-bottom: 0px;
+}
