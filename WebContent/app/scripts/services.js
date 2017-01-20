@@ -6,7 +6,7 @@ angular.module ('moviesApp')
 	.service('movieFactory', ['$resource', 'baseURL', function($resource, baseURL) {
 		
 		this.getMovies = function(){                    
-        	return $resource(baseURL+"movies/:id",null,  {'update':{method:'PUT' }});                    
+        	return $resource(baseURL+"movies/:id",null,  {'get':{method:'GET' }});                    
         };
 		
 	}])
