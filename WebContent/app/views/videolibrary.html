@@ -19,12 +19,14 @@
 			<div class="col-sm-6 col-md-4" ng-repeat="movie in movies | filter:filtText">
 				<div class="hover-div">
 		    		<div class="thumbnail">
-		      			<img src="https://1.bp.blogspot.com/-aFQ-W_KTFWQ/V6BdtpSUy6I/AAAAAAAAAH4/xD_U-BYItSsNvk1UGfROqLBzzU1h32oXQCLcB/s320/4-diwali-greeting-cards-by-ajay-acharya.jpg" alt="Bootstrap Thumbnail: Beautiful Bootstrap Thumbnail like Material Design Cards">
+		      			<img src="https://1.bp.blogspot.com/-aFQ-W_KTFWQ/V6BdtpSUy6I/AAAAAAAAAH4/xD_U-BYItSsNvk1UGfROqLBzzU1h32oXQCLcB/s320/4-diwali-greeting-cards-by-ajay-acharya.jpg" alt="{{movie.alt}}" >
 		      			<div class="caption">
 		        			<h3>{{movie.title}}</h3>
 		        			<p class="card-description"><strong>{{movie.genre}}</strong></p>
-		        			<p>{{movie.plot}}</p>
-		        			<p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+		        			<div class="titlewraptext">
+		        				{{movie.plot}}
+		        			</div>
+		        			<p><a href="#" class="btn btn-primary" role="button">Details</a></p>
 		      			</div>
 		    		</div>
 		  		</div>

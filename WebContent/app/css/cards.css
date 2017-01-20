@@ -57,3 +57,11 @@ img{
 .thumbnail .caption{
 	padding-top: 2px;
 }
+
+/*Wrap text*/
+.titlewraptext {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 20px;
+}
