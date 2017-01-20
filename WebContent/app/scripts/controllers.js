@@ -5,7 +5,7 @@ angular.module ('moviesApp')
 	//Configurates the growl
 	.config(['growlProvider', function (growlProvider) {
 		growlProvider.globalTimeToLive(5000);
-		growlProvider.globalPosition('middle-center');
+		growlProvider.globalPosition('top-right');
 	}])
 
 	//Insert Movie Controller - insert.html

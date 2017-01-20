@@ -19,7 +19,7 @@
 			<div class="col-sm-6 col-md-4" ng-repeat="movie in movies | filter:filtText">
 				<div class="hover-div">
 		    		<div class="thumbnail">
-		      			<img src="https://1.bp.blogspot.com/-aFQ-W_KTFWQ/V6BdtpSUy6I/AAAAAAAAAH4/xD_U-BYItSsNvk1UGfROqLBzzU1h32oXQCLcB/s320/4-diwali-greeting-cards-by-ajay-acharya.jpg" alt="{{movie.alt}}" >
+		      			<img ng-src={{movie.cover}} alt="{{movie.alt}}" >
 		      			<div class="caption">
 		        			<h3>{{movie.title}}</h3>
 		        			<p class="card-description"><strong>{{movie.genre}}</strong></p>
