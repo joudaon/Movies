@@ -30,7 +30,18 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource'])
                         controller: 'InsertController'
                    }
                 }
-            })            
+            })
+            
+            // route for the insert page
+            .state('app.videolibrary', {
+                url:'videolibrary',
+                views: {
+                    'content@': {
+                        templateUrl: 'views/videolibrary.html',
+                        controller: 'VideoLibraryController'
+                   }
+                }
+            })
             
 
         $urlRouterProvider.otherwise('/');
