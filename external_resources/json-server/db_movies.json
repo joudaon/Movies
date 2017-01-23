@@ -1,0 +1,15 @@
+{
+  "movies": [
+    {
+      "title": "La momia",
+      "releasedate": "1998-12-31T23:00:00.000Z",
+      "length": 125,
+      "genre": "Adventure",
+      "plot": "Durante una batalla en Egipto, el legionario Rick O'Connell y un compañero descubren las ruinas de Hamunaptra, la ciudad de los muertos. Algún tiempo después vuelven al mismo lugar con una egiptóloga y su hermano. Allí coinciden con un grupo de estadounidenses, deseosos de correr aventuras, que acabarán provocando la resurrección de la momia de un diabólico sacerdote egipcio que intenta desesperadamente recuperar a su amada.",
+      "cast": "Brendan Fraser, Rachel Weisz, John Hannah, Arnold Vosloo, Jonathan Hyde, Oded Fehr, Kevin J. O'Connor, Stephen Dunham, Aharon Ipalé, Tuc Watkins, Omid Djalili, Erick Avari, Carl Chase, Corey Johnson, Bernard Fox, Patricia Velasquez, Ray Donn",
+      "cover": "img/film_covers/lamomia.png",
+      "downloaddate": "2000-02-04T23:00:00.000Z",
+      "id": 1
+    }
+  ]
+}
