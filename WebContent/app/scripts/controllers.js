@@ -9,7 +9,7 @@ angular.module ('moviesApp')
 	}])
 
 	/*------------Insert Movie Controller - insert.html ------------*/
-	.controller ('InsertController', ['$scope', 'insertmovieFactory', 'growl', function($scope, insertmovieFactory, growl){
+	.controller ('InsertMovieController', ['$scope', 'insertmovieFactory', 'growl', function($scope, insertmovieFactory, growl){
 		//Insert the movie in the db.json file, display a crawl and cleans the form
 		$scope.addMovie = function(){
 			//added "alt" attribute

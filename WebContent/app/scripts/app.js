@@ -22,12 +22,12 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'angular
             })
             
             // route for the insert page
-            .state('app.insert', {
-                url:'insert',
+            .state('app.insertmovie', {
+                url:'insertmovie',
                 views: {
                     'content@': {
-                        templateUrl: 'views/insert.html',
-                        controller: 'InsertController'
+                        templateUrl: 'views/movies/insertmovie.html',
+                        controller: 'InsertMovieController'
                    }
                 }
             })
@@ -37,7 +37,7 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'angular
                 url:'videogallery',
                 views: {
                     'content@': {
-                        templateUrl: 'views/videogallery.html',
+                        templateUrl: 'views/movies/videogallery.html',
                         controller: 'VideoGalleryController'
                    }
                 }
