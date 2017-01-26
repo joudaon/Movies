@@ -21,7 +21,7 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'angular
 
             })
             
-            // route for the insert page
+            // route for the insert movie page
             .state('app.insertmovie', {
                 url:'insertmovie',
                 views: {
@@ -32,7 +32,7 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'angular
                 }
             })
             
-            // route for the insert page
+            // route for the movies gallery page
             .state('app.videogallery', {
                 url:'videogallery',
                 views: {
@@ -43,6 +43,25 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'angular
                 }
             })
             
+            // route for the insert series page
+            .state('app.insertseries', {
+                url:'insertseries',
+                views: {
+                    'content@': {
+                        templateUrl: 'views/series/insertseries.html',
+                   }
+                }
+            })
+
+            // route for the series gallery page
+            .state('app.seriesgallery', {
+                url:'seriesgallery',
+                views: {
+                    'content@': {
+                        templateUrl: 'views/series/seriesgallery.html',
+                   }
+                }
+            })
 
         $urlRouterProvider.otherwise('/');
     })
