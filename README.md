@@ -4,19 +4,24 @@ Web application with reponsive layout using bootstrap framework. Insert movies t
 
 ## Bower Components installation
 
-Angular-ui-bootstrap (https://github.com/angular-ui/bootstrap-bower)
+* Angular-ui-bootstrap (https://github.com/angular-ui/bootstrap-bower)
 ```sh
 $ bower install angular-bootstrap -S
 ```
 
-Angular ngResource ()
+* Angular ngResource ()
 ```sh
 $ bower install angular-resource -S
 ```
 
-Angular-growl-2 (https://github.com/JanStevens/angular-growl-2)
+* Angular-growl-2 (https://github.com/JanStevens/angular-growl-2)
 ```sh
 $ bower install angular-growl-v2 -S
+```
+
+* ng-file-upload (https://github.com/danialfarid/ng-file-upload)
+```sh
+$ bower install ng-file-upload --save
 ```
 
 ## JSHint
