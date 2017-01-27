@@ -18,7 +18,7 @@ angular.module ('moviesApp')
 			insertmovieFactory.saveMovie().save({id:$scope.movie.id}, $scope.movie);			
 			growl.success("Movie " + $scope.movie.title + " correctly saved", {title: 'Success', disableCountDown: true});
 			$scope.movie = {title:"", releasedate:"", length:"", plot:"", cast:"", downloaddate:""};
-			//$scope.movieform.$setPristine();
+			$scope.movieform.$setPristine();
 		}
 					
 	}])

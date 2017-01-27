@@ -16,72 +16,88 @@
         
 		<div class="row row-content">
             <div class="col-xs-12 col-sm-9">
-                <form class="form-horizontal" role="form" id="movieform" ng-submit="addMovie()">
-					<div class="form-group">
+                <form class="form-horizontal" role="form" name="movieform" ng-submit="addMovie(movieform.$valid)" novalidate>
+                	<!-- Title -->
+					<div class="form-group" ng-class="{ 'has-error' : movieform.title.$invalid && !movieform.title.$pristine }">
 						<label for="title" class="col-sm-2 control-label">Title</label>                        
 						<div class="col-sm-10">
 							<div class="input-group"> <span class="input-group-addon"><i class="fa fa-film" aria-hidden="true"></i></span>
-								<input type="text" class="form-control" id="title" name="title" placeholder="Enter Title" ng-model="movie.title">
+								<input type="text" class="form-control" id="title" name="title" placeholder="Enter Title" ng-model="movie.title" required>
 							</div>
+							<p ng-show="movieform.title.$invalid && !movieform.title.$pristine" class="help-block">Title is required.</p>
                     	</div>
                     </div>
-					<div class="form-group">
+                    <!-- Release date -->
+                    <div class="form-group">
 						<label for="releasedate" class="col-sm-2 control-label">Release date</label>                        
 						<div class="col-sm-10">
 							<div class="input-group"> <span class="input-group-addon"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></span>
 								<input type="date" class="form-control" id="releasedate" name="releasedate" placeholder="Enter Date" ng-model="movie.releasedate">
 							</div>
-                    	</div>
-                    </div>
-					<div class="form-group">
+						</div>
+					</div>
+					<!-- Lenght -->
+					<div class="form-group" ng-class="{ 'has-error' : movieform.length.$invalid && !movieform.length.$pristine }">
 						<label for="length" class="col-sm-2 control-label">Length</label>                        
 						<div class="col-sm-10">
 							<div class="input-group"> <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
-								<input type="number" min="0" class="form-control" id="length" name="length" placeholder="Enter Length" ng-model="movie.length">
+								<input type="number" min="0" class="form-control" id="length" name="length" placeholder="Enter Length" ng-model="movie.length" ng-min="60" ng-max="240" required >								
 								<span class="input-group-addon">minutes</span>								
 							</div>
+							<p ng-show="movieform.length.$error.min" class="help-block">Length should be between 60 and 240.</p>
+							<p ng-show="movieform.length.$error.max" class="help-block">Length should be between 60 and 240.</p>
 						</div>
-                    </div>
+					</div>
+					<!-- Genre -->
 					<div class="form-group">
 						<label for="genre" class="col-sm-2 control-label">Genre</label>                        
 						<div class="col-sm-10">
 							<!-- TODO -->
-                    	</div>
-                    </div>
-                    <div class="form-group">
+						</div>
+					</div>
+					<!-- Plot -->
+					<div class="form-group">
 						<label for="plot" class="col-sm-2 control-label">Plot</label>                        
 						<div class="col-sm-10">
 							<textarea class="form-control" id="plot" name="plot" placeholder="Enter Plot" rows="5" ng-model="movie.plot"></textarea>
-                    	</div>
-                    </div>
-                    <div class="form-group">
+						</div>
+					</div>
+					<!-- Plot -->
+					<div class="form-group">
 						<label for="cast" class="col-sm-2 control-label">Cast</label>                        
 						<div class="col-sm-10">
 							<textarea class="form-control" id="cast" name="cast" placeholder="Enter Cast" rows="3" ng-model="movie.cast"></textarea>
-                    	</div>
-                    </div>
-                    <div class="form-group">
+						</div>
+					</div>
+					<!-- Cover -->
+					<div class="form-group">
 						<label for="cover" class="col-sm-2 control-label">Cover</label>                        
 						<div class="col-sm-10">
 							<input id="input-1a" type="file" class="file" data-show-preview="false" ng-model="movie.cover">
-                    	</div>
-                    </div>
-                    <div class="form-group">
+						</div>
+					</div>
+					<!-- Download date -->
+					<div class="form-group">
 						<label for="downloaddate" class="col-sm-2 control-label">Download date</label>                        
 						<div class="col-sm-10">
 							<div class="input-group"> <span class="input-group-addon"><i class="fa fa-download" aria-hidden="true"></i></span>
 								<input type="date" class="form-control" id="downloaddate" name="downloaddate" placeholder="Enter download date" ng-model="movie.downloaddate">
 							</div>
-                    	</div>
-                    </div>
-                   	<div class="form-group"> 
-						<div class="col-sm-10">   
-							<button type="submit" class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
 						</div>
-                    </div>        
-                </form>
+					</div>
+					<!-- Submit button -->
+					<div class="form-group"> 
+						<div class="col-sm-10">   
+							<button type="submit" class="btn btn-primary" ng-disabled="movieform.$invalid"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+						</div>
+					</div>        
+				</form>
 			</div>
 		</div>
+<!-- ***************************************** -->
+
+
+
 		<!-- Growl triggered once the movie in saved correctly -->	
 		<div growl></div>
     <!-- End container -->
