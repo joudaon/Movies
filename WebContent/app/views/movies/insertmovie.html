@@ -19,7 +19,7 @@
 		<form class="form-horizontal" role="form" name="movieform" ng-submit="addMovie(movieform.$valid)" novalidate>
 		<!-- Title -->
 		<div class="form-group" ng-class="{ 'has-error' : movieform.title.$invalid && !movieform.title.$pristine }">
-			<label for="title" class="col-sm-2 control-label">Title</label>                        
+			<label for="title" class="col-sm-2 control-label">Title *</label>                        
 			<div class="col-sm-10">
 				<div class="input-group"> <span class="input-group-addon"><i class="fa fa-film" aria-hidden="true"></i></span>
 					<input type="text" class="form-control" id="title" name="title" placeholder="Enter Title" ng-model="movie.title" required>
@@ -38,7 +38,7 @@
 		</div>
 		<!-- Lenght -->
 		<div class="form-group" ng-class="{ 'has-error' : movieform.length.$invalid && !movieform.length.$pristine }">
-			<label for="length" class="col-sm-2 control-label">Length</label>                        
+			<label for="length" class="col-sm-2 control-label">Length *</label> 			                       
 			<div class="col-sm-10">
 				<div class="input-group"> <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
 					<input type="number" min="0" class="form-control" id="length" name="length" placeholder="Enter Length" ng-model="movie.length" ng-min="60" ng-max="240" required >								
@@ -49,11 +49,16 @@
 			</div>
 		</div>
 		<!-- Genre -->
-		<div class="form-group">
-			<label for="genre" class="col-sm-2 control-label">Genre</label>                        
+		<div class="form-group" ng-class="{ 'has-error' : movieform.genre.$invalid && !movieform.genre.$pristine }">
+			<label for="genre" class="col-sm-2 control-label">Genre *</label> 			                       
 			<div class="col-sm-10">
-				<!-- TODO -->
-			</div>
+				<div>
+					<select class="form-control" id="genre" name="genre" ng-model="movie.genre" required required ng-options="option.value as option.name for option in genreOptions">
+						<option value="">-- Select  --</option>
+					</select>
+					<p ng-show="movieform.genre.$invalid && !movieform.genre.$pristine" class="help-block">Genre is required.</p>
+				</div>
+			</div>			
 		</div>
 		<!-- Plot -->
 		<div class="form-group">

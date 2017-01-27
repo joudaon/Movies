@@ -10,6 +10,23 @@ angular.module ('moviesApp')
 
 	/*------------Insert Movie Controller - insert.html ------------*/
 	.controller ('InsertMovieController', ['$scope', 'insertmovieFactory', 'growl', function($scope, insertmovieFactory, growl){
+		
+	    $scope.genreOptions = [
+	        { name: 'Action', value: 'action' },
+	        { name: 'Adventure', value: 'adventure' },
+	        { name: 'Comedy', value: 'comedy' },
+	        { name: 'Crime', value: 'crime'},
+	        { name: 'Drama', value: 'drama'},
+	        { name: 'Historical', value: 'historical'},
+	        { name: 'Horror', value: 'horror'},
+	        { name: 'Mistery', value: 'mistery'},
+	        { name: 'Musical', value: 'musical'},
+	        { name: 'Romance', value: 'romance'},
+	        { name: 'Science Fiction', value: 'science fiction'},
+	        { name: 'Thriller', value: 'thriller'},
+	        { name: 'Western', value: 'western'},
+	        ];
+		
 		//Insert the movie in the db.json file, display a crawl and cleans the form
 		$scope.addMovie = function(){
 			//added "alt" attribute
