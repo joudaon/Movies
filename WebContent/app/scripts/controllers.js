@@ -10,21 +10,21 @@ angular.module ('moviesApp')
 
 	/*------------Insert Movie Controller - insert.html ------------*/
 	.controller ('InsertMovieController', ['$scope', 'insertmovieFactory', 'growl', function($scope, insertmovieFactory, growl){
-		
+		//Options to be displayed in genre select box
 	    $scope.genreOptions = [
-	        { name: 'Action', value: 'action' },
-	        { name: 'Adventure', value: 'adventure' },
-	        { name: 'Comedy', value: 'comedy' },
-	        { name: 'Crime', value: 'crime'},
-	        { name: 'Drama', value: 'drama'},
-	        { name: 'Historical', value: 'historical'},
-	        { name: 'Horror', value: 'horror'},
-	        { name: 'Mistery', value: 'mistery'},
-	        { name: 'Musical', value: 'musical'},
-	        { name: 'Romance', value: 'romance'},
-	        { name: 'Science Fiction', value: 'science fiction'},
-	        { name: 'Thriller', value: 'thriller'},
-	        { name: 'Western', value: 'western'},
+	        { name: 'Action', value: 'Action' },
+	        { name: 'Adventure', value: 'Adventure' },
+	        { name: 'Comedy', value: 'Comedy' },
+	        { name: 'Crime', value: 'Crime'},
+	        { name: 'Drama', value: 'Drama'},
+	        { name: 'Historical', value: 'Historical'},
+	        { name: 'Horror', value: 'Horror'},
+	        { name: 'Mistery', value: 'Mistery'},
+	        { name: 'Musical', value: 'Musical'},
+	        { name: 'Romance', value: 'Romance'},
+	        { name: 'Science Fiction', value: 'Science Fiction'},
+	        { name: 'Thriller', value: 'Thriller'},
+	        { name: 'Western', value: 'Western'},
 	        ];
 		
 		//Insert the movie in the db.json file, display a crawl and cleans the form
