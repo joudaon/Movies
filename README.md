@@ -30,3 +30,15 @@ $ npm install -g jshint
 ```sh
 $ npm install --save-dev jshint
 ```
+
+## Gulp
+
+* Install gulp globally
+```sh
+$ npm install --global gulp-cli
+```
+
+* Install Gulp as a development dependency
+```sh
+$ npm install --save-dev gulp
+```
