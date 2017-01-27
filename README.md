@@ -2,6 +2,14 @@
 
 Web application with reponsive layout using bootstrap framework. Insert movies to have a tracking of already seen ones.
 
+## Missing files
+
+Once the project is downloaded some bower_components and node_modules files are missing because they have been added to "gitignore" file. To download missing files go to the terminal and type the following:
+```sh
+$ bower install 
+$ npm install
+```
+
 ## Bower Components installation
 
 * Angular-ui-bootstrap (https://github.com/angular-ui/bootstrap-bower)
