@@ -32,7 +32,7 @@ angular.module ('moviesApp')
 		$scope.addMovie = function(){
 			//added "alt" attribute
 			$scope.movie.alt = $scope.movie.title;
-			$scope.movie.genre = $scope.selectedgenres;
+			$scope.movie.genre = $scope.selectedgenres.join(', ');
 			console.log($scope.movie);
 			insertmovieFactory.saveMovie().save({id:$scope.movie.id}, $scope.movie);			
 			growl.success("Movie " + $scope.movie.title + " correctly saved", {title: 'Success', disableCountDown: true});
@@ -49,7 +49,6 @@ angular.module ('moviesApp')
 		videogalleryFactory.getMovies().query(
                 function(response) {
                     $scope.movies = response;
-                    //$scope.showMenu = true;
                 },
                 function(response) {
                     $scope.message = "Error: "+response.status + " " + response.statusText;
