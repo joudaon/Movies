@@ -11,31 +11,34 @@ angular.module ('moviesApp')
 	/*------------Insert Movie Controller - insert.html ------------*/
 	.controller ('InsertMovieController', ['$scope', 'insertmovieFactory', 'growl', function($scope, insertmovieFactory, growl){
 		//Options to be displayed in genre select box
+		$scope.selectedgenres = [];
 	    $scope.genreOptions = [
-	        { name: 'Action', value: 'Action' },
-	        { name: 'Adventure', value: 'Adventure' },
-	        { name: 'Comedy', value: 'Comedy' },
-	        { name: 'Crime', value: 'Crime'},
-	        { name: 'Drama', value: 'Drama'},
-	        { name: 'Historical', value: 'Historical'},
-	        { name: 'Horror', value: 'Horror'},
-	        { name: 'Mistery', value: 'Mistery'},
-	        { name: 'Musical', value: 'Musical'},
-	        { name: 'Romance', value: 'Romance'},
-	        { name: 'Science Fiction', value: 'Science Fiction'},
-	        { name: 'Thriller', value: 'Thriller'},
-	        { name: 'Western', value: 'Western'},
+	        'Action',
+	        'Adventure',
+	        'Comedy',
+	        'Crime',
+	        'Drama',
+	        'Historical',
+	        'Horror',
+	        'Mistery',
+	        'Musical',
+	        'Romance',
+	        'Science Fiction',
+	        'Thriller',
+	        'Western'
 	        ];
 		
 		//Insert the movie in the db.json file, display a crawl and cleans the form
 		$scope.addMovie = function(){
 			//added "alt" attribute
 			$scope.movie.alt = $scope.movie.title;
+			$scope.movie.genre = $scope.selectedgenres;
 			console.log($scope.movie);
 			insertmovieFactory.saveMovie().save({id:$scope.movie.id}, $scope.movie);			
 			growl.success("Movie " + $scope.movie.title + " correctly saved", {title: 'Success', disableCountDown: true});
-			$scope.movie = {title:"", releasedate:"", length:"", plot:"", cast:"", downloaddate:""};
+			$scope.movie = {title:"", releasedate:"", length:"", genre:"", plot:"", cast:"", downloaddate:""};
 			$scope.movieform.$setPristine();
+			$scope.selectedgenres = [];
 		}
 					
 	}])

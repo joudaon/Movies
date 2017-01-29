@@ -32,9 +32,9 @@ $ bower install angular-growl-v2 -S
 $ bower install ng-file-upload --save
 ```
 
-* bootstrap-select (for select boxes) (https://silviomoreto.github.io/bootstrap-select/)
+* angular-chosen-localytics (for select boxes) (https://github.com/leocaseiro/angular-chosen)
 ```sh
-$ bower install bootstrap-select -S
+$ bower install angular-chosen-localytics --save
 ```
 
 ## JSHint

@@ -52,12 +52,22 @@
 		<div class="form-group" ng-class="{ 'has-error' : movieform.genre.$invalid && !movieform.genre.$pristine }">
 			<label for="genre" class="col-sm-2 control-label">Genre *</label> 			                       
 			<div class="col-sm-10">
-				<div>
-					<select class="form-control" id="genre" name="genre" ng-model="movie.genre" required required ng-options="option.value as option.name for option in genreOptions">
-						<option value="">-- Select  --</option>
-					</select>
-					<p ng-show="movieform.genre.$invalid && !movieform.genre.$pristine" class="help-block">Genre is required.</p>
+				<div class="input-group"> <span class="input-group-addon"><i class="fa fa-venus-mars" aria-hidden="true"></i></span>
+				<!-- experimental -->
+					<select class="form-control"
+							multiple 
+							chosen 			
+							id="genre"
+							name="genre" 							
+							data-placeholder="Choose genres"
+							no-results-text="'Could not find that genre'"
+							ng-model="selectedgenres" 
+							ng-options="s for s in genreOptions" 
+							required>
+							<option value=""></option>
+					</select>				
 				</div>
+				<p ng-show="movieform.genre.$invalid && !movieform.genre.$pristine" class="help-block">Genre is required.</p>
 			</div>			
 		</div>
 		<!-- Plot -->
