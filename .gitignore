@@ -1,3 +1,6 @@
 /build/
+# Packages that need to be installed 
 node_modules/
 bower_components/
+# Dist folder - compiled project
+/dist/
