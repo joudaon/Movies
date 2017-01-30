@@ -61,7 +61,7 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'angular
                         templateUrl: 'views/series/seriesgallery.html',
                    }
                 }
-            })
+            });
 
         $urlRouterProvider.otherwise('/');
     })

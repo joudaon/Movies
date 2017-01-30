@@ -39,7 +39,7 @@ angular.module ('moviesApp')
 			$scope.movie = {title:"", releasedate:"", length:"", genre:"", plot:"", cast:"", downloaddate:""};
 			$scope.movieform.$setPristine();
 			$scope.selectedgenres = [];
-		}
+		};
 					
 	}])
 	
