@@ -60,6 +60,7 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'angular
                 views: {
                     'content@': {
                         templateUrl: 'views/series/insertseries.html',
+                        controller: 'InsertSeriesController'
                    }
                 }
             })

@@ -55,4 +55,18 @@ angular.module ('moviesApp')
                 });					
 	}])
 	
+	/*------------Insert Series Controller - inserseries.html------------*/
+	.controller ('InsertSeriesController', ['$scope', 'insertSeriesFactory', 'growl', function($scope, insertSeriesFactory, growl){
+		
+		//Insert the serie in the db.json file, display a crawl and cleans the form
+		$scope.addSeries = function(){
+			//added "alt" attribute
+			$scope.serie.alt = $scope.serie.title;
+			console.log($scope.serie);
+			insertSeriesFactory.saveSeries().save({id:$scope.serie.id}, $scope.serie);
+			growl.success("Series '" + $scope.serie.title + "' correctly saved", {title: 'Success', disableCountDown: true});
+			$scope.serie = {title:""};
+			$scope.seriesform.$setPristine();
+		};			
+	}]);	
 ;
