@@ -28,6 +28,24 @@
 				<p ng-show="seriesform.title.$invalid && !seriesform.title.$pristine" class="help-block">Title is required.</p>
             </div>
 		</div>
+		<!-- Year -->
+		<div class="form-group" ng-class="{ 'has-error' : seriesform.year.$invalid && !seriesform.year.$pristine }">
+			<label for="year" class="col-sm-2 control-label">Year *</label> 			                       
+			<div class="col-sm-10">
+				<div class="input-group"> <span class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
+					<input type="number" min="0" class="form-control" id="year" name="year" placeholder="Enter Year" ng-model="serie.year" ng-min="1950" ng-max="currentyear" required>			
+				</div>
+				<p ng-show="seriesform.year.$error.min" class="help-block">Year should be between 1950 and {{currentyear}}.</p>
+				<p ng-show="seriesform.year.$error.max" class="help-block">Year should be between 1950 and {{currentyear}}.</p>
+			</div>
+		</div>		
+		<!-- Description -->
+		<div class="form-group">
+			<label for="description" class="col-sm-2 control-label">Description</label>                        
+			<div class="col-sm-10">
+				<textarea class="form-control" id="description" name="description" placeholder="Enter Description" rows="5" ng-model="serie.description"></textarea>
+			</div>
+		</div>		
 		<!-- Submit button -->
 		<div class="form-group"> 
 			<div class="col-sm-10">   

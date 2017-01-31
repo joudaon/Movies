@@ -60,10 +60,11 @@ angular.module ('moviesApp')
 	}])
 	
 	/*-------------------------------------------------------------------*/
-	/*------------Insert Series Controller - inserseries.html------------*/
+	/*-----------Insert Series Controller - insertseries.html------------*/
 	/*-------------------------------------------------------------------*/
 	.controller ('InsertSeriesController', ['$scope', 'insertSeriesFactory', 'growl', function($scope, insertSeriesFactory, growl){
-		
+		//Get current year
+		$scope.currentyear = new Date().getFullYear();
 		//Insert the serie in the db.json file, display a crawl and cleans the form
 		$scope.addSeries = function(){
 			//added "alt" attribute
