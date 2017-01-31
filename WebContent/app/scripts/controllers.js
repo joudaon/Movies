@@ -8,7 +8,9 @@ angular.module ('moviesApp')
 		growlProvider.globalPosition('top-right');
 	}])
 
+	/*--------------------------------------------------------------*/
 	/*------------Insert Movie Controller - insert.html ------------*/
+	/*--------------------------------------------------------------*/
 	.controller ('InsertMovieController', ['$scope', 'insertmovieFactory', 'growl', function($scope, insertmovieFactory, growl){
 		//Options to be displayed in genre select box
 		$scope.selectedgenres = [];
@@ -42,8 +44,10 @@ angular.module ('moviesApp')
 		};
 					
 	}])
-	
+
+	/*--------------------------------------------------------------------*/
 	/*------------Video Gallery Controller - videogallery.html------------*/
+	/*--------------------------------------------------------------------*/
 	.controller ('VideoGalleryController', ['$scope', 'videogalleryFactory', function($scope, videogalleryFactory){		
 		//Get dishes from db_movies.json
 		videogalleryFactory.getMovies().query(
@@ -55,7 +59,9 @@ angular.module ('moviesApp')
                 });					
 	}])
 	
+	/*-------------------------------------------------------------------*/
 	/*------------Insert Series Controller - inserseries.html------------*/
+	/*-------------------------------------------------------------------*/
 	.controller ('InsertSeriesController', ['$scope', 'insertSeriesFactory', 'growl', function($scope, insertSeriesFactory, growl){
 		
 		//Insert the serie in the db.json file, display a crawl and cleans the form
