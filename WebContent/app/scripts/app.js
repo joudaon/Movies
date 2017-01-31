@@ -43,7 +43,7 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'angular
                 }
             })
             
-            // route for the movies gallery page
+            // route for the movie Details page
             .state('app.moviedetails', {
                 url:'moviedetails',
                 views: {
