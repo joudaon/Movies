@@ -43,6 +43,17 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'angular
                 }
             })
             
+            // route for the movies gallery page
+            .state('app.moviedetails', {
+                url:'moviedetails',
+                views: {
+                    'content@': {
+                        templateUrl: 'views/movies/moviedetails.html',
+                        controller: 'MovieDetailsController'
+                   }
+                }
+            })
+            
             // route for the insert series page
             .state('app.insertseries', {
                 url:'insertseries',
