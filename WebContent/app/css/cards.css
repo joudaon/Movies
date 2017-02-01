@@ -60,13 +60,15 @@ img{
 
 /*Wrap text*/
 .titlewraptext {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    padding-bottom: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	margin-bottom: 20px;
 }
 
-/**/
+/*Filters styles*/
 .row-content-cards{
     margin: 0px auto;
     padding: 50px 0px 50px 0px;
