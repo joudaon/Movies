@@ -48,11 +48,15 @@ angular.module ('moviesApp')
 	/*--------------------------------------------------------------------*/
 	/*------------Video Gallery Controller - videogallery.html------------*/
 	/*--------------------------------------------------------------------*/
-	.controller ('VideoGalleryController', ['$scope', 'videogalleryFactory', function($scope, videogalleryFactory){		
+	.controller ('VideoGalleryController', ['$scope', 'videogalleryFactory', function($scope, videogalleryFactory){				
 		//Get dishes from db_movies.json
 		videogalleryFactory.getMovies().query(
                 function(response) {
                     $scope.movies = response;
+                    //Displays nested genres
+                    angular.forEach($scope.movies, function(item){
+                    	console.log(item.genre);
+                    })
                 },
                 function(response) {
                     $scope.message = "Error: "+response.status + " " + response.statusText;
