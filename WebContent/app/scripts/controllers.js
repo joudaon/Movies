@@ -53,7 +53,14 @@ angular.module ('moviesApp')
 		videogalleryFactory.getMovies().query(
                 function(response) {
                     $scope.movies = response;
-                    //Displays nested genres
+                    //Displays movies whose genre is adventure - testing purpose
+                    var target_genre = 'Adventure';
+                    var movies_array = $scope.movies;
+                    var movies_filtered = movies_array.filter ( x => {
+                    	return x.genre.indexOf (target_genre) >= 0 
+                    });
+                    console.log(movies_filtered);                    
+                    //Displays nested genres  testing purpose
                     angular.forEach($scope.movies, function(item){
                     	console.log(item.genre);
                     })
