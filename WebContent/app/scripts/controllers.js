@@ -37,7 +37,7 @@ angular.module ('moviesApp')
 			$scope.movie.genre = $scope.selectedgenres;
 			console.log($scope.movie);
 			insertmovieFactory.saveMovie().save({id:$scope.movie.id}, $scope.movie);			
-			growl.success("Movie " + $scope.movie.title + " correctly saved", {title: 'Success', disableCountDown: true});
+			growl.success("Movie '" + $scope.movie.title + "' correctly saved", {title: 'Success', disableCountDown: true});
 			$scope.movie = {title:"", releasedate:"", length:"", genre:"", plot:"", cast:"", downloaddate:""};
 			$scope.movieform.$setPristine();
 			$scope.selectedgenres = [];
@@ -72,7 +72,7 @@ angular.module ('moviesApp')
 			console.log($scope.serie);
 			insertSeriesFactory.saveSeries().save({id:$scope.serie.id}, $scope.serie);
 			growl.success("Series '" + $scope.serie.title + "' correctly saved", {title: 'Success', disableCountDown: true});
-			$scope.serie = {title:""};
+			$scope.serie = {title:"", year:"", description:""};
 			$scope.seriesform.$setPristine();
 		};			
 	}]);	
