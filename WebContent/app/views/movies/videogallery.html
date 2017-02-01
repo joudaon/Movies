@@ -20,7 +20,7 @@
 			<div class="form-group">
 				<label class="col-sm-3 control-label label-title" for="search">Search movie:</label>
 				<div class="col-sm-9">
-					<input type="text" class="form-control" placeholder="Search movie" ng-model="filtText.title">
+					<input type="text" class="form-control" placeholder="Search movie" ng-model="moviesfilter.title">
 				</div>
 			</div>
 		</div>
@@ -28,7 +28,7 @@
    
 	<div class="container-fluid cards-row">
 		<div calss="hover-effect">
-			<div class="col-sm-6 col-md-4" ng-repeat="movie in movies | filter:filtText">
+			<div class="col-sm-6 col-md-4" ng-repeat="movie in movies | filter:moviesfilter as filtText">
 				<div class="hover-div">
 		    		<div class="thumbnail">
 		      			<img ng-src={{movie.cover}} alt="{{movie.alt}}" >
@@ -45,5 +45,7 @@
 			</div>
 		</div>	
 	</div>
-
+	<p ng-if="filtText.length === 0">
+	      <strong>No results found...</strong>
+    <p>
 </div>
