@@ -28,7 +28,7 @@
    
 	<div class="container-fluid cards-row">
 		<div calss="hover-effect">
-			<div class="col-sm-6 col-md-4" ng-repeat="movie in movies | filter:moviesfilter as filtText">
+			<div class="col-sm-6 col-md-4" ng-repeat="movie in movies | orderBy: 'title' | filter:moviesfilter as filtText">
 				<div class="hover-div">
 		    		<div class="thumbnail">
 		      			<img ng-src={{movie.cover}} alt="{{movie.alt}}" >
