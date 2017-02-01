@@ -34,7 +34,7 @@
 		      			<img ng-src={{movie.cover}} alt="{{movie.alt}}" >
 		      			<div class="caption">
 		        			<h3>{{movie.title}}</h3>
-		        			<p class="card-description" ng-repeat="genre in movie.genre"><strong>{{genre}}</strong></p>
+		        			<span class="badge-space badge" ng-repeat="genre in movie.genre"><strong>{{genre}} </strong></span>
 		        			<div class="titlewraptext">
 		        				{{movie.plot}}
 		        			</div>
