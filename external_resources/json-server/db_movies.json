@@ -4,12 +4,32 @@
       "title": "La momia",
       "releasedate": "1998-12-31T23:00:00.000Z",
       "length": 125,
-      "genre": "Adventure",
+      "genre": [
+        "Adventure"
+      ],
       "plot": "Durante una batalla en Egipto, el legionario Rick O'Connell y un compañero descubren las ruinas de Hamunaptra, la ciudad de los muertos. Algún tiempo después vuelven al mismo lugar con una egiptóloga y su hermano. Allí coinciden con un grupo de estadounidenses, deseosos de correr aventuras, que acabarán provocando la resurrección de la momia de un diabólico sacerdote egipcio que intenta desesperadamente recuperar a su amada.",
       "cast": "Brendan Fraser, Rachel Weisz, John Hannah, Arnold Vosloo, Jonathan Hyde, Oded Fehr, Kevin J. O'Connor, Stephen Dunham, Aharon Ipalé, Tuc Watkins, Omid Djalili, Erick Avari, Carl Chase, Corey Johnson, Bernard Fox, Patricia Velasquez, Ray Donn",
       "cover": "img/film_covers/lamomia.png",
       "downloaddate": "2000-02-04T23:00:00.000Z",
+      "alt": "La momia",
       "id": 1
+    },
+    {
+      "title": "Los juegos del hambre",
+      "releasedate": "2011-12-31T23:00:00.000Z",
+      "length": 143,
+      "plot": "Lo que en el pasado fueron los Estados Unidos, ahora es una nación llamada Panem; un imponente Capitolio ejerce un control riguroso sobre los 12 distritos que lo rodean y que están aislados entre sí. Cada distrito se ve obligado a enviar anualmente un chico y una chica entre los doce y los dieciocho años para que participen en los Hunger Games, unos juegos que son transmitidos en directo por la televisión. Se trata de una lucha a muerte, en la que sólo puede haber un superviviente. Katniss Everdeen, una joven de dieciséis años, decide sustituir a su hermana en los juegos; pero para ella, que ya ha visto la muerte de cerca, la lucha por la supervivencia es su segunda naturaleza.",
+	  "cover": "img/film_covers/losjuegosdelhambre.jpg",
+      "cast": "Jennifer Lawrence, Josh Hutcherson, Elizabeth Banks, Woody Harrelson, Donald Sutherland, Stanley Tucci, Liam Hemsworth, Toby Jones, Lenny Kravitz, Wes Bentley, Paula Malcomson, Isabelle Fuhrman, Sandra Ellis Lafferty, Paula Malcomson, Kimiko Gelman, Nelson Ascencio, Brooke Bundy, Amandla Stenberg, Dayo Okeniyi, Leven Rambin, Jack Quaid, Latarsha Rose, Alexander Ludwig, Jacqueline Emerson",
+      "downloaddate": null,
+      "alt": "Los juegos del hambre",
+      "genre": [
+        "Action",
+        "Drama",
+        "Science Fiction"
+      ],
+      "id": 2
     }
-  ]
+  ],
+  "series": []
 }
