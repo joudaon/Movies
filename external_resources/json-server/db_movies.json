@@ -19,7 +19,7 @@
       "releasedate": "2011-12-31T23:00:00.000Z",
       "length": 143,
       "plot": "Lo que en el pasado fueron los Estados Unidos, ahora es una nación llamada Panem; un imponente Capitolio ejerce un control riguroso sobre los 12 distritos que lo rodean y que están aislados entre sí. Cada distrito se ve obligado a enviar anualmente un chico y una chica entre los doce y los dieciocho años para que participen en los Hunger Games, unos juegos que son transmitidos en directo por la televisión. Se trata de una lucha a muerte, en la que sólo puede haber un superviviente. Katniss Everdeen, una joven de dieciséis años, decide sustituir a su hermana en los juegos; pero para ella, que ya ha visto la muerte de cerca, la lucha por la supervivencia es su segunda naturaleza.",
-	  "cover": "img/film_covers/losjuegosdelhambre.jpg",
+      "cover": "img/film_covers/losjuegosdelhambre.jpg",
       "cast": "Jennifer Lawrence, Josh Hutcherson, Elizabeth Banks, Woody Harrelson, Donald Sutherland, Stanley Tucci, Liam Hemsworth, Toby Jones, Lenny Kravitz, Wes Bentley, Paula Malcomson, Isabelle Fuhrman, Sandra Ellis Lafferty, Paula Malcomson, Kimiko Gelman, Nelson Ascencio, Brooke Bundy, Amandla Stenberg, Dayo Okeniyi, Leven Rambin, Jack Quaid, Latarsha Rose, Alexander Ludwig, Jacqueline Emerson",
       "downloaddate": null,
       "alt": "Los juegos del hambre",
@@ -29,6 +29,23 @@
         "Science Fiction"
       ],
       "id": 2
+    },
+    {
+      "title": "Gladiator",
+      "releasedate": "2000-04-30T22:00:00.000Z",
+      "length": 155,
+      "plot": "En el año 180, el Imperio Romano domina todo el mundo conocido. Tras una gran victoria sobre los bárbaros del norte, el anciano emperador Marco Aurelio (Richard Harris) decide transferir el poder a Máximo (Russell Crowe), bravo general de sus ejércitos y hombre de inquebrantable lealtad al imperio. Pero su hijo Cómodo (Joaquin Phoenix), que aspiraba al trono, no lo acepta y trata de asesinar a Máximo.",
+	  "cover": "img/film_covers/gladiator.jpg",
+      "cast": "Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed, Richard Harris, Ralf Moeller, Derek Jacobi, Djimon Hounsou, David Schofield, John Shrapnel, Spencer Treat Clark, Tomas Arana, David Hemmings, Tommy Flanagan, Sven-Ole Thorsen, Tony Curran, Giorgio Cantarini, Omid Djalili, Giannina Facio, Michael Sheen",
+      "downloaddate": null,
+      "alt": "Gladiator",
+      "genre": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Historical"
+      ],
+      "id": 3
     }
   ],
   "series": []
