@@ -65,7 +65,7 @@ angular.module ('moviesApp')
 	                    $scope.movies = response;
 	                });
 			$scope.moviesfilter = {};
-		}
+		};
 						
 		//Genre filter
 		$scope.filterAdventure = function (genreButton){
@@ -73,11 +73,11 @@ angular.module ('moviesApp')
 			var target_genres2 = genreButton;
             var movies_array2= $scope.movies;
             var movies_filtered2 = movies_array2.filter ( x => {
-            	return x.genre.indexOf (target_genres2) >= 0 
-            })
+            	return x.genre.indexOf (target_genres2) >= 0;
+            });
             console.log(movies_filtered2);
             $scope.movies = movies_filtered2;
-			}
+			};
 			//Setting background color to selected genre
 			var selector = '.genreoptions button';			
 			$(selector).on('click', function(){
@@ -103,6 +103,6 @@ angular.module ('moviesApp')
 			$scope.serie = {title:"", year:"", description:""};
 			$scope.seriesform.$setPristine();
 		};
-	}]);
+	}])
 
 ;
