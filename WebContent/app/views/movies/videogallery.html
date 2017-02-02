@@ -24,7 +24,11 @@
 				</div>
 			</div>
 			<!-- Button -->
-			<button ng-click="filterAdventure()" ng-model="moviesfilter.genre">Adventure</button>
+			<button ng-click="filterAdventure('Action')" ng-model="moviesfilter.genre">Action</button>
+			<button ng-click="filterAdventure('Adventure')" ng-model="moviesfilter.genre">Adventure</button>
+			<button ng-click="filterAdventure('Comedy')" ng-model="moviesfilter.genre">Comedy</button>
+			<button ng-click="filterAdventure('Crime')" ng-model="moviesfilter.genre">Crime</button>
+			<button ng-click="filterAdventure('Drama')" ng-model="moviesfilter.genre">Drama</button>
 			<!-- Button -->
 			<button ng-click="reset()">Reset</button>
 		</div>
