@@ -67,7 +67,7 @@ angular.module ('moviesApp')
 			$scope.moviesfilter = {};
 		}
 						
-		//Adventure filter
+		//Genre filter
 		$scope.filterAdventure = function (genreButton){
 			//New array with movies with the selected genre passed through parameter
 			var target_genres2 = genreButton;
@@ -78,6 +78,12 @@ angular.module ('moviesApp')
             console.log(movies_filtered2);
             $scope.movies = movies_filtered2;
 			}
+			//Setting background color to selected genre
+			var selector = '.genreoptions button';			
+			$(selector).on('click', function(){
+			    $(selector).removeClass('active');
+			    $(this).addClass('active');
+			});
 		
 	}])
 	
