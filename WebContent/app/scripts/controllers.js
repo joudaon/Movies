@@ -59,7 +59,16 @@ angular.module ('moviesApp')
                     var movies_filtered = movies_array.filter ( x => {
                     	return x.genre.indexOf (target_genre) >= 0 
                     });
-                    console.log(movies_filtered);                    
+                    console.log(movies_filtered); 
+                    //Displays movies whose genre is an aarray -testing purpose
+                    var target_genres1 = ['Drama', 'Historical' ];
+                    var movies_array1= $scope.movies;
+                    var movies_filtered1 = movies_array1.filter (x => {
+                    	return target_genres1.filter (y => {
+                    		return x.genre.indexOf (y) >= 0;
+                    	}).length;
+                    })
+                    console.log(movies_filtered1);
                     //Displays nested genres  testing purpose
                     angular.forEach($scope.movies, function(item){
                     	console.log(item.genre);
