@@ -68,7 +68,7 @@ angular.module ('moviesApp')
 		};
 						
 		//Genre filter
-		$scope.filterAdventure = function (genreButton){
+		$scope.filterGenre = function (genreButton){
 			//New array with movies with the selected genre passed through parameter
 			var target_genres2 = genreButton;
             var movies_array2= $scope.movies;
