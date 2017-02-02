@@ -9,7 +9,7 @@
       ],
       "plot": "Durante una batalla en Egipto, el legionario Rick O'Connell y un compañero descubren las ruinas de Hamunaptra, la ciudad de los muertos. Algún tiempo después vuelven al mismo lugar con una egiptóloga y su hermano. Allí coinciden con un grupo de estadounidenses, deseosos de correr aventuras, que acabarán provocando la resurrección de la momia de un diabólico sacerdote egipcio que intenta desesperadamente recuperar a su amada.",
       "cast": "Brendan Fraser, Rachel Weisz, John Hannah, Arnold Vosloo, Jonathan Hyde, Oded Fehr, Kevin J. O'Connor, Stephen Dunham, Aharon Ipalé, Tuc Watkins, Omid Djalili, Erick Avari, Carl Chase, Corey Johnson, Bernard Fox, Patricia Velasquez, Ray Donn",
-      "cover": "img/film_covers/lamomia.png",
+      "cover": "img/film_covers/lamomia.jpg",
       "downloaddate": "2000-02-04T23:00:00.000Z",
       "alt": "La momia",
       "id": 1
@@ -35,7 +35,7 @@
       "releasedate": "2000-04-30T22:00:00.000Z",
       "length": 155,
       "plot": "En el año 180, el Imperio Romano domina todo el mundo conocido. Tras una gran victoria sobre los bárbaros del norte, el anciano emperador Marco Aurelio (Richard Harris) decide transferir el poder a Máximo (Russell Crowe), bravo general de sus ejércitos y hombre de inquebrantable lealtad al imperio. Pero su hijo Cómodo (Joaquin Phoenix), que aspiraba al trono, no lo acepta y trata de asesinar a Máximo.",
-	  "cover": "img/film_covers/gladiator.jpg",
+      "cover": "img/film_covers/gladiator.jpg",
       "cast": "Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed, Richard Harris, Ralf Moeller, Derek Jacobi, Djimon Hounsou, David Schofield, John Shrapnel, Spencer Treat Clark, Tomas Arana, David Hemmings, Tommy Flanagan, Sven-Ole Thorsen, Tony Curran, Giorgio Cantarini, Omid Djalili, Giannina Facio, Michael Sheen",
       "downloaddate": null,
       "alt": "Gladiator",
@@ -46,6 +46,21 @@
         "Historical"
       ],
       "id": 3
+    },
+    {
+      "title": "The Imitation Game",
+      "releasedate": "2015-01-06T23:00:00.000Z",
+      "length": 114,
+      "cast": "Benedict Cumberbatch, Keira Knightley, Mark Strong, Charles Dance, Matthew Goode, Matthew Beard, Allen Leech, Tuppence Middleton, Rory Kinnear, Tom Goodman-Hill, Hannah Flynn, Steven Waddington, Alex Lawther, Jack Bannon, James Northcote, Ancuta Breaban, Victoria Wicks",
+	  "cover": "img/film_covers/theimitationgame.jpg",
+      "plot": "Biopic sobre el matemático británico Alan Turing, famoso por haber descifrado los códigos secretos nazis contenidos en la máquina Enigma, lo cual determinó el devenir de la II Guerra Mundial (1939-1945) en favor de los Aliados. Lejos de ser admirado como un héroe, Turing fue acusado y juzgado por su condición de homosexual en 1952.",
+      "downloaddate": null,
+      "alt": "The Imitation Game",
+      "genre": [
+        "Drama",
+        "Thriller"
+      ],
+      "id": 4
     }
   ],
   "series": []
