@@ -17,43 +17,54 @@
 	<div class="row row-content-cards">
 		<div class="col-xs-12 col-sm-9">
 			<!-- Title filter --> 
-			<div class="form-group">
-				<label class="col-sm-3 control-label label-title" for="search">Search movie:</label>
-				<div class="col-sm-9">
+				<label class="col-sm-3 col-md-2 control-label label-title" for="search">Search movie:</label>
+				<div class="col-sm-9 col-md-5">
 					<input type="text" class="form-control" placeholder="Search movie" ng-model="moviesfilter.title">
 				</div>
-			</div>
-			<!-- Button -->
-			<button ng-click="filterAdventure('Action')" ng-model="moviesfilter.genre">Action</button>
-			<button ng-click="filterAdventure('Adventure')" ng-model="moviesfilter.genre">Adventure</button>
-			<button ng-click="filterAdventure('Comedy')" ng-model="moviesfilter.genre">Comedy</button>
-			<button ng-click="filterAdventure('Crime')" ng-model="moviesfilter.genre">Crime</button>
-			<button ng-click="filterAdventure('Drama')" ng-model="moviesfilter.genre">Drama</button>
-			<!-- Button -->
-			<button ng-click="reset()">Reset</button>
+				<button class="col-md-2 btn btn-default" ng-click="reset()">Reset</button>
+			</div>			
 		</div>
 	</div>
+	
+	<div class="container">
+		<div class="list-group col-sm-6 col-md-2">
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Action')" ng-model="moviesfilter.genre">Action</button>
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Adventure')" ng-model="moviesfilter.genre">Adventure</button>
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Comedy')" ng-model="moviesfilter.genre">Comedy</button>
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Crime')" ng-model="moviesfilter.genre">Crime</button>
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Drama')" ng-model="moviesfilter.genre">Drama</button>
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Historical')" ng-model="moviesfilter.genre">Historical</button>
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Horror')" ng-model="moviesfilter.genre">Horror</button>
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Mistery')" ng-model="moviesfilter.genre">Mistery</button>
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Musical')" ng-model="moviesfilter.genre">Musical</button>
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Romance')" ng-model="moviesfilter.genre">Romance</button>
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Science Fiction')" ng-model="moviesfilter.genre">Science Fiction</button>
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Thriller')" ng-model="moviesfilter.genre">Thriller</button>
+			<button class="list-group-item list-group-item-action" ng-click="filterAdventure('Western')" ng-model="moviesfilter.genre">Western</button>
+		</div>
    
-	<div class="container-fluid cards-row">
-		<div calss="hover-effect">
-			<div class="col-sm-6 col-md-4" ng-repeat="movie in movies | orderBy: 'title' | filter:moviesfilter as filtText">
-				<div class="hover-div">
-		    		<div class="thumbnail">
-		      			<img ng-src={{movie.cover}} alt="{{movie.alt}}" >
-		      			<div class="caption">
-		        			<h3>{{movie.title}}</h3>
-		        			<span class="badge-space badge" ng-repeat="genre in movie.genre"><strong>{{genre}} </strong></span>
-		        			<div class="titlewraptext">
-		        				{{movie.plot}}
-		        			</div>
-		        			<p><a href="#" class="btn btn-primary" role="button">Details</a></p>
-		      			</div>
-		    		</div>
-		  		</div>
-			</div>
-		</div>	
-	</div>
+		<div class="col-md-10 cards-row">
+			<div calss="hover-effect">
+				<div class="col-sm-6 col-md-6" ng-repeat="movie in movies | orderBy: 'title' | filter:moviesfilter as filtText">
+					<div class="hover-div">
+			    		<div class="thumbnail">
+			      			<img class="" ng-src={{movie.cover}} alt="{{movie.alt}}" >
+			      			<div class="caption">
+			        			<h3>{{movie.title}}</h3>
+			        			<span class="badge-space badge" ng-repeat="genre in movie.genre"><strong>{{genre}} </strong></span>
+			        			<div class="titlewraptext">
+			        				{{movie.plot}}
+			        			</div>
+			        			<p><a href="#" class="btn btn-primary" role="button">Details</a></p>
+			      			</div>
+			    		</div>
+			  		</div>
+				</div>
+			</div>	
+		</div>
 	<p ng-if="filtText.length === 0">
 	      <strong>No results found...</strong>
     <p>
+    </div>
+    
 </div>

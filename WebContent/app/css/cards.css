@@ -52,6 +52,7 @@
 
 img{
 	border-radius: 5px 5px 5px 5px;
+	max-height: 225px;
 }
 
 .thumbnail .caption{
