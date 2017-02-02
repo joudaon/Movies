@@ -53,30 +53,52 @@ angular.module ('moviesApp')
 		videogalleryFactory.getMovies().query(
                 function(response) {
                     $scope.movies = response;
-                    //Displays movies whose genre is adventure - testing purpose
-                    var target_genre = 'Adventure';
-                    var movies_array = $scope.movies;
-                    var movies_filtered = movies_array.filter ( x => {
-                    	return x.genre.indexOf (target_genre) >= 0 
-                    });
-                    console.log(movies_filtered); 
-                    //Displays movies whose genre is an aarray -testing purpose
-                    var target_genres1 = ['Drama', 'Historical' ];
-                    var movies_array1= $scope.movies;
-                    var movies_filtered1 = movies_array1.filter (x => {
-                    	return target_genres1.filter (y => {
-                    		return x.genre.indexOf (y) >= 0;
-                    	}).length;
-                    })
-                    console.log(movies_filtered1);
-                    //Displays nested genres  testing purpose
-                    angular.forEach($scope.movies, function(item){
-                    	console.log(item.genre);
-                    })
                 },
                 function(response) {
                     $scope.message = "Error: "+response.status + " " + response.statusText;
-                });					
+                });	
+		//Adventure filter
+		$scope.filterAdventure = function (){
+			var target_genres2 = ['Adventure'];
+            var movies_array2= $scope.movies;
+            var movies_filtered2 = movies_array2.filter (x => {
+            	return target_genres2.filter (y => {
+            		return x.genre.indexOf (y) >= 0;
+            	}).length;
+            })
+            console.log(movies_filtered2);
+            $scope.movies = movies_filtered2;
+		}
+		//Reset filter
+		$scope.reset = function(){
+			videogalleryFactory.getMovies().query(
+	                function(response) {
+	                    $scope.movies = response;
+	                });
+			$scope.moviesfilter = {};
+		}
+		
+/*        //TESTING - Displays movies whose genre is adventure
+        var target_genre = 'Adventure';
+        var movies_array = $scope.movies;
+        var movies_filtered = movies_array.filter ( x => {
+        	return x.genre.indexOf (target_genre) >= 0 
+        });
+        console.log(movies_filtered); 
+        //TESTING - Displays movies whose genre is an aarray -testing purpose
+        var target_genres1 = ['Drama', 'Historical' ];
+        var movies_array1= $scope.movies;
+        var movies_filtered1 = movies_array1.filter (x => {
+        	return target_genres1.filter (y => {
+        		return x.genre.indexOf (y) >= 0;
+        	}).length;
+        })
+        console.log(movies_filtered1);
+        //TESTING - Displays nested genres  testing purpose
+        angular.forEach($scope.movies, function(item){
+        	console.log(item.genre);
+        }) */
+		
 	}])
 	
 	/*-------------------------------------------------------------------*/
