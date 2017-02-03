@@ -2,12 +2,23 @@
 
 angular.module ('moviesApp')
 	
-	//Configurates the growl
+	//Configurates the growl for InsertMovieController
 	.config(['growlProvider', function (growlProvider) {
 		growlProvider.globalTimeToLive(5000);
 		growlProvider.globalPosition('top-right');
 	}])
 
+	/*--------------------------------------------------------------*/
+	/*---------------Header Controller - insert.html ---------------*/
+	/*--------------------------------------------------------------*/	
+	.controller('HeaderController', ['$scope', '$state', function ($scope, $state) {
+		//Highlights active menu item
+		$scope.stateis = function(curstate) {
+		       return $state.is(curstate);  
+		    };
+	}])
+	
+	
 	/*--------------------------------------------------------------*/
 	/*------------Insert Movie Controller - insert.html ------------*/
 	/*--------------------------------------------------------------*/

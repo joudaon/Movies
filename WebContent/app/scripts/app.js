@@ -10,6 +10,7 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'angular
                 views: {
                     'header': {
                         templateUrl : 'views/header.html',
+                        controller: 'HeaderController'
                     },
                     'content': {
                         templateUrl : 'views/home.html',
