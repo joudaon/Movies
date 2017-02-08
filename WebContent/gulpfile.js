@@ -7,8 +7,12 @@ var gulp = require('gulp'),
 	babel = require('gulp-babel'), // Fixed lambda expressions
 	usemin = require('gulp-usemin'),
 	rev = require('gulp-rev'), //Gives a hash name to the filename
-	ngAnnotate = require('gulp-ng-annotate'); //Add angularjs dependency injection annotations with ng-annotate
+	ngAnnotate = require('gulp-ng-annotate'), //Add angularjs dependency injection annotations with ng-annotate
+	cleanCSS = require('gulp-clean-css'); //Minifies css
 
+/*-------------*/
+/*Testing tasks*/
+/*-------------*/
 // Default
 gulp.task('default', function(){
 	console.log('Default task :)... still working...');
@@ -45,3 +49,6 @@ gulp.task('watchJSfiles', function(){
 	gulp.watch('app/scripts/**/*.js', ['concatenateJS']);
 });
 
+/*-----------------*/
+/*End Testing tasks*/
+/*-----------------*/
