@@ -3,4 +3,4 @@
 node_modules/
 bower_components/
 # Dist folder - compiled project
-/dist/
+dist/
