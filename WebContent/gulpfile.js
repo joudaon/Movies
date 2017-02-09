@@ -4,7 +4,7 @@ var gulp = require('gulp'), //The streaming build system (https://www.npmjs.com/
 	del = require('del'), //Deletes folders (https://www.npmjs.com/package/del)
 	concat = require('gulp-concat'), //Concatenates files (https://www.npmjs.com/package/gulp-concat)
 	uglify = require('gulp-uglify'), //Minify files with UglifyJS. (https://www.npmjs.com/package/gulp-uglify)
-	babel = require('gulp-babel'), //Fixed lambda expressions (https://www.npmjs.com/package/gulp-babel)
+	babel = require('gulp-babel'), //Fixed lambda expression in 'VideoGalleryController' (https://www.npmjs.com/package/gulp-babel)
 	usemin = require('gulp-usemin'), //Replaces references to non-optimized scripts or stylesheets into a set of HTML files (or any templates/views). (https://www.npmjs.com/package/gulp-usemin)
 	rev = require('gulp-rev'), //Gives a hash name to the filename (https://www.npmjs.com/package/gulp-rev)
 	ngAnnotate = require('gulp-ng-annotate'), //Add angularjs dependency injection annotations with ng-annotate (https://www.npmjs.com/package/gulp-ng-annotate)
@@ -38,7 +38,7 @@ gulp.task('watchJSfiles', function(){
 
 //Whenever a js file is updated jshint is run
 gulp.task('watchJSerrors', function() {
-  gulp.watch('app/scripts/**/*.js', ['jshint']);
+	gulp.watch('app/scripts/**/*.js', ['jshint']);
 });
 
 /*-----------------*/
@@ -66,26 +66,26 @@ gulp.task('clean', function(){
 
 //Usemin - js and css files are concatenated and minified. index.html js and css links are changed.
 gulp.task('usemin',['jshint'], function () {
-	  return gulp.src('./app/**/*.html')
-	      .pipe(usemin({
-	        css:[cleanCSS(),rev()],
-	        js: [babel({presets: ['es2015']}),ngAnnotate(),uglify(),rev()]
-	      }))
-	      .pipe(gulp.dest('dist/'));
-	});
+	return gulp.src('./app/**/*.html')
+	.pipe(usemin({
+		css:[cleanCSS(),rev()],
+		js: [babel({presets: ['es2015']}),ngAnnotate(),uglify(),rev()]
+	}))
+	.pipe(gulp.dest('dist/'));
+});
 
 //Imagemin - Optimizes image files 
 gulp.task('imagemin', function(){
 	return del(['dist/img']), gulp.src('app/img/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/img'))
-    .pipe(notify({ message: 'Images optimization task completed' }));
+	.pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+	.pipe(gulp.dest('dist/img'))
+	.pipe(notify({ message: 'Images optimization task completed' }));
 });
 
 //copyfonts - bootstrap and font-awesome fonts are piped into /dist/fonts folder
 gulp.task('copyfonts', ['clean'], function() {
-	   gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}*')
-	   .pipe(gulp.dest('./dist/fonts'));
-	   gulp.src('./bower_components/bootstrap/dist/fonts/**/*.{ttf,woff,eof,svg}*')
-	   .pipe(gulp.dest('./dist/fonts'));
-	});
+	gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}*')
+	.pipe(gulp.dest('./dist/fonts'));
+	gulp.src('./bower_components/bootstrap/dist/fonts/**/*.{ttf,woff,eof,svg}*')
+	.pipe(gulp.dest('./dist/fonts'));
+});
