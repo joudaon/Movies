@@ -8,7 +8,10 @@ var gulp = require('gulp'),
 	usemin = require('gulp-usemin'),
 	rev = require('gulp-rev'), //Gives a hash name to the filename
 	ngAnnotate = require('gulp-ng-annotate'), //Add angularjs dependency injection annotations with ng-annotate
-	cleanCSS = require('gulp-clean-css'); //Minifies css
+	cleanCSS = require('gulp-clean-css'), //Minifies css
+	imagemin = require('gulp-imagemin'), //Optimizes images
+	cache = require('gulp-cache'), //A temp file based caching proxy task for gulp
+	notify = require('gulp-notify'); //Notification plugin for gulp
 
 /*-------------*/
 /*Testing tasks*/
@@ -27,7 +30,7 @@ gulp.task('jshint', function() {
 
 // Clean - cleans dist folder
 gulp.task('clean', function(){
-	return del(['dist/**']);
+	return del(['dist/**'])
 });
 
 // ConcatenateJS - Concatenates all js files into all.js file and uglifies it.
@@ -40,13 +43,21 @@ gulp.task('concatenateJS', function(){
 	.pipe(uglify().on('error', function(e){
             console.log(e);
          }))      
-    .pipe(rev())  
+    .pipe(rev())
 	.pipe(gulp.dest('dist'))
 });
 
 // watchJSfiles - Watches for changes in any js file and executes concatenateJS task
 gulp.task('watchJSfiles', function(){
 	gulp.watch('app/scripts/**/*.js', ['concatenateJS']);
+});
+
+//Imagemin - Optimizes image files 
+gulp.task('imagemin', function(){
+	return del(['dist/img']), gulp.src('app/img/**/*')
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('dist/img'))
+    .pipe(notify({ message: 'Images optimization task completed' }));
 });
 
 /*-----------------*/
