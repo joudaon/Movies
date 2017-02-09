@@ -63,3 +63,13 @@ gulp.task('imagemin', function(){
 /*-----------------*/
 /*End Testing tasks*/
 /*-----------------*/
+
+//Usemin - js and css files are concatenated and minified. index.html js and css links are changed.
+gulp.task('usemin',['jshint'], function () {
+	  return gulp.src('./app/**/*.html')
+	      .pipe(usemin({
+	        css:[cleanCSS(),rev()],
+	        js: [babel({presets: ['es2015']}),ngAnnotate(),uglify(),rev()]
+	      }))
+	      .pipe(gulp.dest('dist/'));
+	});
