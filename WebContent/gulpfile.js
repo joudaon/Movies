@@ -36,6 +36,11 @@ gulp.task('watchJSfiles', function(){
 	gulp.watch('app/scripts/**/*.js', ['concatenateJS']);
 });
 
+//Whenever a js file is updated jshint is run
+gulp.task('watchJSerrors', function() {
+  gulp.watch('app/scripts/**/*.js', ['jshint']);
+});
+
 /*-----------------*/
 /*End Testing tasks*/
 /*-----------------*/
