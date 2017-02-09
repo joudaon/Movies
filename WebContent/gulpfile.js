@@ -16,22 +16,6 @@ var gulp = require('gulp'),
 /*-------------*/
 /*Testing tasks*/
 /*-------------*/
-// Default
-gulp.task('default', function(){
-	console.log('Default task :)... still working...');
-});
-
-// JSHint - displays javascript file errors
-gulp.task('jshint', function() {
-	return gulp.src('app/scripts/**/*.js')
-	.pipe(jshint())
-	.pipe(jshint.reporter(stylish));
-	});
-
-// Clean - cleans dist folder
-gulp.task('clean', function(){
-	return del(['dist/**'])
-});
 
 // ConcatenateJS - Concatenates all js files into all.js file and uglifies it.
 gulp.task('concatenateJS', function(){
@@ -52,17 +36,28 @@ gulp.task('watchJSfiles', function(){
 	gulp.watch('app/scripts/**/*.js', ['concatenateJS']);
 });
 
-//Imagemin - Optimizes image files 
-gulp.task('imagemin', function(){
-	return del(['dist/img']), gulp.src('app/img/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/img'))
-    .pipe(notify({ message: 'Images optimization task completed' }));
-});
-
 /*-----------------*/
 /*End Testing tasks*/
 /*-----------------*/
+
+//-------------------------------------------//
+//Default task ($gulp runs this default task)//
+//-------------------------------------------//
+gulp.task('default', ['clean'], function() {
+    gulp.start('usemin', 'imagemin','copyfonts');
+});	
+
+// JSHint - displays javascript file errors
+gulp.task('jshint', function() {
+	return gulp.src('app/scripts/**/*.js')
+	.pipe(jshint())
+	.pipe(jshint.reporter(stylish));
+	});
+
+// Clean - cleans dist folder
+gulp.task('clean', function(){
+	return del(['dist/**'])
+});
 
 //Usemin - js and css files are concatenated and minified. index.html js and css links are changed.
 gulp.task('usemin',['jshint'], function () {
@@ -72,4 +67,20 @@ gulp.task('usemin',['jshint'], function () {
 	        js: [babel({presets: ['es2015']}),ngAnnotate(),uglify(),rev()]
 	      }))
 	      .pipe(gulp.dest('dist/'));
+	});
+
+//Imagemin - Optimizes image files 
+gulp.task('imagemin', function(){
+	return del(['dist/img']), gulp.src('app/img/**/*')
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('dist/img'))
+    .pipe(notify({ message: 'Images optimization task completed' }));
+});
+
+//copyfonts - bootstrap and font-awesome fonts are piped into /dist/fonts folder
+gulp.task('copyfonts', ['clean'], function() {
+	   gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}*')
+	   .pipe(gulp.dest('./dist/fonts'));
+	   gulp.src('./bower_components/bootstrap/dist/fonts/**/*.{ttf,woff,eof,svg}*')
+	   .pipe(gulp.dest('./dist/fonts'));
 	});
