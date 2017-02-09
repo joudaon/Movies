@@ -1,17 +1,17 @@
-var gulp = require('gulp'),
-	jshint = require('gulp-jshint'), 
-	stylish = require('jshint-stylish'),
-	del = require('del'), //Deletes folders
-	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify'),
-	babel = require('gulp-babel'), // Fixed lambda expressions
-	usemin = require('gulp-usemin'),
-	rev = require('gulp-rev'), //Gives a hash name to the filename
-	ngAnnotate = require('gulp-ng-annotate'), //Add angularjs dependency injection annotations with ng-annotate
-	cleanCSS = require('gulp-clean-css'), //Minifies css
-	imagemin = require('gulp-imagemin'), //Optimizes images
-	cache = require('gulp-cache'), //A temp file based caching proxy task for gulp
-	notify = require('gulp-notify'); //Notification plugin for gulp
+var gulp = require('gulp'), //The streaming build system (https://www.npmjs.com/package/gulp)
+	jshint = require('gulp-jshint'), //Highlights js code errors (https://www.npmjs.com/package/gulp-jshint)
+	stylish = require('jshint-stylish'), //Stylish reporter for JSHint (https://www.npmjs.com/package/jshint-stylish)
+	del = require('del'), //Deletes folders (https://www.npmjs.com/package/del)
+	concat = require('gulp-concat'), //Concatenates files (https://www.npmjs.com/package/gulp-concat)
+	uglify = require('gulp-uglify'), //Minify files with UglifyJS. (https://www.npmjs.com/package/gulp-uglify)
+	babel = require('gulp-babel'), //Fixed lambda expressions (https://www.npmjs.com/package/gulp-babel)
+	usemin = require('gulp-usemin'), //Replaces references to non-optimized scripts or stylesheets into a set of HTML files (or any templates/views). (https://www.npmjs.com/package/gulp-usemin)
+	rev = require('gulp-rev'), //Gives a hash name to the filename (https://www.npmjs.com/package/gulp-rev)
+	ngAnnotate = require('gulp-ng-annotate'), //Add angularjs dependency injection annotations with ng-annotate (https://www.npmjs.com/package/gulp-ng-annotate)
+	cleanCSS = require('gulp-clean-css'), //Minifies css (https://www.npmjs.com/package/gulp-clean-css)
+	imagemin = require('gulp-imagemin'), //Optimizes images (https://www.npmjs.com/package/gulp-imagemin)
+	cache = require('gulp-cache'), //A temp file based caching proxy task for gulp (https://www.npmjs.com/package/gulp-cache)
+	notify = require('gulp-notify'); //Notification plugin for gulp (https://www.npmjs.com/package/gulp-notify)
 
 /*-------------*/
 /*Testing tasks*/
