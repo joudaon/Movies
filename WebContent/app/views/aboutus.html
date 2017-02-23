@@ -7,15 +7,43 @@
 				<li><a href="index.html">Home</a></li>
 				<li class="active">About Us</li>
 			</ul>
+		</div>
+		<div class="col-xs-12">
+			<h3>About Us</h3>
+			<hr>
+		</div>
 	</div>
-	<div class="col-xs-12">
-		<h3>About Us</h3>
-		<hr>
+            
+	<div class="row row-content">
+		<h3>Where we are</h3>
+	    <div id="googlemap"></div>
 	</div>
 </div>
-      
-<div class="row row-content">
-	<div class="col-xs-12 col-sm-9">
-		
-	</div>
-</div>
+
+<!-- Google Map Script -->
+<script>
+  function initMap() {
+    var bilbao = {lat: 43.261495, lng: -2.93335};
+    var map = new google.maps.Map(document.getElementById('googlemap'), {
+      zoom: 10,
+      center: bilbao
+    });
+    var marker = new google.maps.Marker({
+      position: bilbao,
+      map: map,
+      title: 'MyMovies'
+    });
+        
+    var infowindow = new google.maps.InfoWindow({
+        content: '<strong>My Movies<strong>',
+        maxWidth: 100
+      });
+    
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=MY_KEY&callback=initMap">
+</script>
