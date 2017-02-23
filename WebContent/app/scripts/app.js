@@ -71,10 +71,20 @@ angular.module('moviesApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'angular
                 url:'seriesgallery',
                 views: {
                     'content@': {
-                        templateUrl: 'views/series/seriesgallery.html',
+                        templateUrl: 'views/series/seriesgallery.html'
                    }
                 }
-            });
+            })
+        
+	        // route for the About Us page
+	        .state('app.aboutus', {
+	            url:'aboutus',
+	            views: {
+	                'content@': {
+	                    templateUrl: 'views/aboutus.html'
+	               }
+	            }
+	        });
 
         $urlRouterProvider.otherwise('/');
     })
